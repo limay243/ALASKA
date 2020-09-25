@@ -10,15 +10,9 @@ class Autoload{
 			if (file_exists('./controllers/'.$file)){
 				require './controllers/'.$file;
 			}
-
-			if (file_exists('./views/'.$file)){
-				require './views/'.$file;
-			}
-
 			if (file_exists('./config/'.$file)){
 				require './config/'.$file;
 			}
 		});
 	}
 }
-
