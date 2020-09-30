@@ -11,11 +11,11 @@
 		<!-- Google font -->
 		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700%7CNunito:300,600" rel="stylesheet"> 
 		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="<?= MON_SITE ?>public/templateCSS/css/bootstrap.min.css"/>
+		<link type="text/css" rel="stylesheet" href="<?= MON_SITE ?>public/css/bootstrap.min.css"/>
 		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href="<?= MON_SITE ?>public/templateCSS/css/font-awesome.min.css">
+		<link rel="stylesheet" href="<?= MON_SITE ?>public/css/font-awesome.min.css">
 		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="<?= MON_SITE ?>public/templateCSS/css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="<?= MON_SITE ?>public/css/style.css"/>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -227,13 +227,7 @@
 		<script src="<?= MON_SITE ?>public/js/jquery.min.js"></script>
 		<script src="<?= MON_SITE ?>public/js/bootstrap.min.js"></script>
 		<script src="<?= MON_SITE ?>public/js/main.js"></script>
-		<script src="<?= MON_SITE ?>public/js/mooveMenu.js"></script>
-		<script src="<?= MON_SITE ?>public/js/signalColor.js"></script>
-
-		<script src="<?= MON_SITE ?>public/js/demo/chart-area-demo.js"></script>
-		<script src="<?= MON_SITE ?>public/js/demo/chart-bar-demo.js"></script>
-		<script src="<?= MON_SITE ?>public/js/demo/chart-pie-demo.js"></script>
-		<script src="<?= MON_SITE ?>public/js/demo/databases-demo.js"></script>
+		
 
 	</body>
 </html>

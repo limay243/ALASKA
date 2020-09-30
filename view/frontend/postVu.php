@@ -7,7 +7,6 @@
                 <?php if(empty($editPost)): ?>
             <em>Créé le <?= $post['creation_date_fr'] ?></em><br>
                 <?php endif; ?>
-            <em>Dernière modification le <?= $post['modif_date_fr'] ?></em>
             <p><?= htmlspecialchars($post['contenu']) ?></p>               
         </div>
 
@@ -18,14 +17,14 @@
             <?php foreach ($comments as $comment){?>
                 <p>
                     <strong><?= htmlspecialchars($comment['author']) ?></strong>: 
-                    le <?= htmlspecialchars($comment['comment_date_fr']) ?><br>
+                    le <?= htmlspecialchars($comment['comment_date_fr']) ?><br><br>
                     <?= htmlspecialchars($comment['comment']) ?><br>
                     <?php if(isset($_SESSION["userType"])): ?>
 
                     <?php if(isset($alertComment)==true): ?>
                      <p><font color="red">deja signalé</font></p>
                     <?php else: ?>
-                     <div id='signalCom'><a href="<?=MON_SITE?>alertComment/<?=$comment['id']?>">Signaler</a></div>
+                     <br><a href="<?=MON_SITE?>alertComment/<?=$comment['id']?>">Signaler</a>
                     <?php endif; ?>
                     <?php endif; ?>
                 </p>
@@ -47,12 +46,10 @@
                 <textarea name="comment"></textarea>
             </div>
             <input type="hidden" name="postId" value="<?= $post['id'] ?>">
-            <input type="submit" value="Ajouter" />
+            <input type="submit" id="ajouter" value="Ajouter" />
         </form><br>
-                <h3><a href="<?= MON_SITE ?>listPosts">Retour aux articles</a></h3>
-
+                <div id="retourArticles"><h3><a href="<?= MON_SITE ?>listPosts">Retour aux articles</a></h3></div>
     <?php endif; ?>
-
     </div>
 </div>
 

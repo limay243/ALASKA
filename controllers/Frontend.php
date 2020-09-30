@@ -86,7 +86,7 @@ class Frontend{
 
     public function alertComment($id){ 
       if(isset($_GET['id'])){
-      $this->commentManager = new CommentManager();
+        $this->commentManager = new CommentManager();
         $this->commentManager->signaleComment($id); /*---------------- SIGNALE-COMMENT ----------------*/
         header('Location: post');
     }

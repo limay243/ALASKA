@@ -167,8 +167,176 @@ textarea{
 }
 /*****************fin AFFICHER TABLE POSTS************************/
 
+.cadreArticles{
+  width: 50%;
+  height: 100%;
+  position: relative;
+  top: auto;
+  left: 20%;
+  list-style: none;
+  padding: 10px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  background-color: #8466;
+}
+.cadreArticles h2{
+  color: white;
+}
+.cadreArticles ul{
+  background-color: #5853;
+  color: black;
+  border-radius: 10px;
+  padding: 15px;
+}
+.cadreArticles li a{
+  background-color: #6541;
+}
+#contenuArt{
+  padding: 10px 0px 10px 0px;
+}
+#Modifier a{
+  color: red;
+  background-color: white;
+  padding: 3px 10px 3px 10px;
+  border-radius: 10px;
+}
+
+#cadreComAdmin{
+    width: auto;
+    height: 45%;
+    position: relative;
+    top: 40px;
+    left: 15%;
+    padding: 30px 100px 160px 100px;
+    background-color: #8461;
+    border-radius: 5px;
+} 
+#singleCommentAlert{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: auto;
+    left: 0%;
+    margin: 10px 300px 20px 0px;
+    padding: 20px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px grey;
+    background-color: #6541;
+}
+#singleCommentAlert h2{
+color: black;
+}
+#singleCommentAlert p{
+    position: relative;
+    top: auto;
+    background-color: #3831;
+    color: black;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 1px 1px 9px grey;
+}
+#commentaire {
+  background-color: white;
+  color: blue;
+  padding: 15px;
+  font-size: 200%;
+}
+#boutons{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+#supprimer{
+    position: absolute;
+    top: auto;
+    left:25%;
+    border-radius: 10px;
+    background-color: #5654;
+    box-shadow: 1px 1px 9px grey;
+    padding: 2px 30px;
+}
+#supprimer h3{
+    color: red;
+}
+#accepter{
+    position: absolute;
+    top: auto;
+    left: 55%;
+    color: green;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #5654;
+    box-shadow: 1px 1px 9px grey;
+    padding: 2px 30px;
+}
+#accepter h3{
+    color: green;
+}
+#retour a{
+    width: 30%;
+    height: auto;
+    position: relative;
+    top: 70px;
+    left: 0px;
+    font-size: 200%;
+    color: black;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px grey;
+    background-color: #3241;
+}
 
 
+#alertComment{
+  width: 50%;
+  height: 100%;
+  position: relative;
+  top: auto;
+  left: 20%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #8466;
+}
+#alertComment h2{
+  color: white;
+}
+#aucuneAlert h2{
+  width: auto;
+  height: auto;
+  position: relative;
+  text-align: center;
+  color: green;
+  background-color: white;
+}
+#cadreCom a{
+  width: auto;;
+  height: auto;
+  position: relative;
+  top: auto;
+  color: red;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+}
+#cadreCom{
+  width: auto;;
+  height: auto;
+  position: relative;
+  top: auto;
+  color: black;
+  padding: 10px;
+  background-color: #5853;
+  border-radius: 10px;
+}
+#cadreCom p{
+  width: auto;;
+  height: auto;
+  position: relative;
+  top: 100%;
+  padding: 10px;
+}
 
 
 
@@ -269,6 +437,7 @@ ul,
 dl {
   margin-top: 0;
   margin-bottom: 1rem;
+  list-style: none;
 }
 
 ol ol,
@@ -276,6 +445,7 @@ ul ul,
 ol ul,
 ul ol {
   margin-bottom: 0;
+  list-style: none;
 }
 
 dt {

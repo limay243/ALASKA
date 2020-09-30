@@ -7,7 +7,7 @@
     public function getComments($id)
     {       
         $db = $this->dbConnect();
-        $comments = $db->prepare('SELECT id, author, comment, alert, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE postId=? ORDER BY comment_date DESC');
+        $comments = $db->prepare('SELECT id, author, comment, Alerte, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE postId=? ORDER BY comment_date DESC');
         $comments->execute(array($id));
 
         return $comments;
@@ -17,7 +17,7 @@
     public function getComment()
     {       
         $db = $this->dbConnect();
-        $com = $db->prepare('SELECT id, author, comment, alert, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments');
+        $com = $db->prepare('SELECT id, author, comment, Alerte, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments');
         $com->execute(array());
         $comm = $com->fetch();
 
@@ -28,7 +28,7 @@
     public function getCommentSup($id)
     {       
         $db = $this->dbConnect();
-        $com = $db->prepare('SELECT id, author, comment, alert, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE id=?');
+        $com = $db->prepare('SELECT id, author, comment, Alerte, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE id=?');
         $com->execute(array($id));
         $comm = $com->fetch();
 
@@ -39,8 +39,8 @@
     public function getCommentsAdmin()
     {       
         $db = $this->dbConnect();
-        $commentaire = $db->prepare('SELECT id, author, comment, alert, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE alert=?');
-        $commentaire->execute(array('alert'));
+        $commentaire = $db->prepare('SELECT id, author, comment, Alerte, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE Alerte=?');
+        $commentaire->execute(array('Alerte'));
         
         return $commentaire->fetchAll();
     }
@@ -79,7 +79,7 @@
     public function designalerComment($id)
     {
         $db = $this->dbConnect();
-        $comments = $db->prepare('UPDATE comments SET alert="" WHERE id=?');
+        $comments = $db->prepare('UPDATE comments SET Alerte="" WHERE id=?');
         $req = $comments->execute(array($id));
         
         return $req;
@@ -90,7 +90,7 @@
     public function signaleComment($id)
     {
         $db = $this->dbConnect();
-        $comSigne = $db->prepare('UPDATE comments SET alert="alert" WHERE id=?');
+        $comSigne = $db->prepare('UPDATE comments SET Alerte="Alerte" WHERE id=?');
         $req=$comSigne->execute(array($id));
         
         return $req;

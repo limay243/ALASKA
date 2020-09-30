@@ -13,14 +13,14 @@ public function __construct(){
     public function postAdmin(){ 
         $this->postManager = new PostManager();
         $req = $this->postManager->getPostAdmin();
-        require('view/backend/admin/postAdminView.php');
+        require('view/backend/postAdminView.php');
     }
 
     public function adminPage(){
       if(isset($_SESSION['userType']) && !empty($_SESSION['userType']==1)){
         $this->logManager = new LogManager();
         $task = $this->logManager->getLogMembers();
-        require('view/backend/admin/adminView.php');
+        require('view/backend/adminView.php');
       }
       else {
             header('Location:accueil');
@@ -59,7 +59,6 @@ public function __construct(){
         $this->logManager = new LogManager();
         $reqUser = $this->logManager->getLogIn($_POST['email'], $_POST['pass1']);
         $userExist=$reqUser->rowCount();
-              //var_dump($email, $pass1);
 
         if($userExist==1){ 
           $userInfo=$reqUser->fetch(); 
@@ -104,7 +103,7 @@ public function __construct(){
     public function alertAdmin(){/*---------------- VUE-SINGLE-SIGNALE ----------------*/
         $this->commentManager = new CommentManager();
         $commentaires = $this->commentManager->getCommentsAdmin();
-          require('view/backend/admin/alertViewAdmin.php');
+          require('view/backend/alertViewAdmin.php');
     }
 
     public function alertComment(){ 
@@ -120,7 +119,7 @@ public function __construct(){
       if($this->getId){
         $this->commentManager = new CommentManager();
         $comm = $this->commentManager->getCommentSup($this->getId);
-        require('view/frontend/comView.php');
+        require('view/Backend/comView.php');
       }
     }
 
@@ -144,12 +143,12 @@ public function __construct(){
       if(isset($_GET['id'])){
         $this->commentManager = new CommentManager();
         $req = $this->commentManager->getCommentsAdmin($id);
-       require('view/frontend/admin/adminView.php');
+       require('view/backend/adminView.php');
     }
   }
 
     public function createForgotPass(){                /*---------------- MOT-DE-PASSE-OUBLIE ----------------*/
-       require('view/backend/admin/forgotPass.php');
+       require('view/backend/forgotPass.php');
     }
 }
 ?>

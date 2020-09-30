@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste</title>
+</head>
+<body>
 <?php ob_start(); ?>
 
 <!-- section -->
@@ -28,15 +34,15 @@
             <!-- post -->
         </div>
             <?php } ?>
-                    <div id="pagination">
+                          
+<!-- col-md-4 -->
+                </div>
+                <div id="pagination">
                             <?php
                                 for($i = 1; $i <= $pagesTotal; $i++){
                                     echo'<a href="'.MON_SITE.'listPosts/'.$i.'">&nbsp;&nbsp;'.$i.'&nbsp;|</a>';
-                                }
-                            ?>
-                    </div>        
-<!-- col-md-4 -->
-                </div>
+                                }?>
+                    </div>  
 <!-- row -->
             </div>
 <!-- col-md-12 -->  
@@ -48,3 +54,4 @@
 </div>
         <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>
+</body>

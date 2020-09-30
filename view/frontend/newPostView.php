@@ -4,21 +4,21 @@
 	<meta charset="utf-8" />
        <title>Modifier article</title>
 	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="<?= MON_SITE ?>public/Contact_Form/images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="<?= MON_SITE ?>public/img/icons/favicon.ico"/>
 
-	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/Contact_Form/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/Contact_Form/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/vendor/animate/animate.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/Contact_Form/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/Contact_Form/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/vendor/select2/select2.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/Contact_Form/css/util.css">
-	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/Contact_Form/css/main.css">
+	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/css/util.css">
+	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/css/main.css">
 
 
-	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>view/backEnd/admin/css/sb-admin-2.css" >
+	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/css/sb-admin-2.css" >
 
 <!--===============================================================================================-->
   <script src="https://cdn.tiny.cloud/1/g7twshktaukuhj4z0joc2kwe7k0oyytpd495s1jzxaqfkrb7/tinymce/5/tinymce.min.js
@@ -31,7 +31,7 @@
 		
 		<div class="container-contact1">
 			<div class="contact1-pic js-tilt" data-tilt>
-				<img src="<?= MON_SITE ?>public/Contact_Form/images/img-01.png" alt="IMG">
+				<img src="<?= MON_SITE ?>public/img/img-01.png" alt="IMG">
 			</div>
 
 			<form method="post" action="<?= MON_SITE ?>editPost/<?= $post['id']?>"class="contact1-form validate-form">
@@ -78,24 +78,24 @@
 	</div>
 
 	<!--===============================================================================================-->
-	<script src="<?= MON_SITE ?>public/Contact_Form/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="<?= MON_SITE ?>public/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script src="<?= MON_SITE ?>public/Contact_Form/vendor/bootstrap/js/popper.js"></script>
-	<script src="<?= MON_SITE ?>public/Contact_Form/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="<?= MON_SITE ?>public/bootstrap/js/popper.js"></script>
+	<script src="<?= MON_SITE ?>public/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script src="<?= MON_SITE ?>public/Contact_Form/vendor/select2/select2.min.js"></script>
+	<script src="<?= MON_SITE ?>public/select2/select2.min.js"></script>
 <!--===============================================================================================-->
-	<script src="<?= MON_SITE ?>public/Contact_Form/vendor/tilt/tilt.jquery.min.js"></script>
+	<script src="<?= MON_SITE ?>public/tilt/tilt.jquery.min.js"></script>
 	<script >
 		$('.js-tilt').tilt({
 			scale: 1.1
 		})
 	</script>
 
-	<script src="<?= MON_SITE ?>public/js/main.js"></script>
+	<script src="<?= MON_SITE ?>public/js/mainForm.js"></script>
 
 	<?php $content = ob_get_clean(); ?>
-	<?php require'view/backend/admin/admin.php'; ?>
+	<?php require'view/backend/admin.php'; ?>
 
 </body>
 </html>
