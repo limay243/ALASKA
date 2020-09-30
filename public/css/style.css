@@ -283,7 +283,7 @@ a{
 
 
 
- #nav .container {
+ #nav .containerTemp {
      width: 100%;
      position: relative;
 }
@@ -310,7 +310,7 @@ a{
      max-height: 70px;
      background-color: grey;
 }
-#nav .container h2 {
+#nav .containerTemp h2 {
      width: 100%;
      position: absolute;
      left: 25%;
@@ -324,6 +324,7 @@ a{
 
 /*---------------------------- MENU ----------------------------*/
  .nav-menu {
+    display: inline-block;
     position: absolute;
      left: 60%;
      background-color: #bcef;
@@ -1011,11 +1012,11 @@ textarea{
 
 
 /*================================== POST PAGE ============================*/
- .sticky-container {
+ .sticky-containerTemp {
      position: relative;
      padding-left: 80px;
 }
- .sticky-container .sticky-shares {
+ .sticky-containerTemp .sticky-shares {
      position: absolute;
      top: 0;
      left: 0;
@@ -1423,7 +1424,7 @@ textarea{
      margin: 0px;
     }
 
-    #nav .container h2 {
+    #nav .containerTemp h2 {
      width: auto;
      height: auto;
      position: absolute;
@@ -1432,26 +1433,26 @@ textarea{
      color: white;
     }
 
-    #nav .container{
+    #nav .containerTemp{
      padding: 0px;
     }
 }
 
 @media only screen and (max-width: 471px) {
-    #nav .container h2 {
+    #nav .containerTemp h2 {
      left: 6%;
     }
 }
 
     @media only screen and (max-width: 435px) {
-    #nav .container h2 {
+    #nav .containerTemp h2 {
      left: 20%;
      font-size: 150%;
     }
 }
 
     @media only screen and (max-width: 429px) {
-    #nav .container h2 {
+    #nav .containerTemp h2 {
      left: 20%;
      font-size: 150%;
     }
@@ -1461,7 +1462,7 @@ textarea{
     }
 }
      @media only screen and (max-width: 359px) {
-    #nav .container h2 {
+    #nav .containerTemp h2 {
      left: 20%;
      font-size: 150%;
     }
@@ -1476,13 +1477,13 @@ textarea{
     left: 2%;
     }
 
-    #nav .container h2 {
+    #nav .containerTemp h2 {
      left: 15%;
      font-size: 150%;
     }
 
     @media only screen and (max-width: 302px) {
-    #nav .container h2 {
+    #nav .containerTemp h2 {
      left: 7%;
      font-size: 150%;
     }
