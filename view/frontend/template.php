@@ -33,7 +33,7 @@
 			<div id="nav">
 				<!-- Main Nav -->
 				<div id="nav-fixed">
-					<div class="container">
+					<div class="containerTemp">
 						<!-- logo -->
 						<div class="nav-logo">
 							<a href="<?= MON_SITE ?>accueil" class="logo"><img src="<?= MON_SITE ?>public/img/train.jpg"></a>
