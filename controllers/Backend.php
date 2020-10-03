@@ -10,6 +10,28 @@ public function __construct(){
 /******************************************=SECTION ADMIN=****************************************/
 
 /*---------------- VUE-POST-ADMIN ----------------*/
+public function createPostView(){
+      require('view/backend/createPost.php');
+    }
+
+     public function createPost(){ 
+    if(isset($_POST['titre']) && isset($_POST['content'])){    
+        $this->postManager = new PostManager();
+        $this->postManager->addPost($_POST['titre'],$_POST['content']);
+        header('Location:listPosts');
+    }
+  }
+
+/*--------------- VUE-MODIF-POST ----------------*/
+    public function modifPostView($id){  
+     if($this->getId !=1){                  
+        $this->postManager = new PostManager();
+        $post = $this->postManager->getPost($this->getId);
+        require('view/backend/modifPostView.php');
+      }
+    }
+
+
     public function postAdmin(){ 
         $this->postManager = new PostManager();
         $req = $this->postManager->getPostAdmin();
@@ -119,7 +141,7 @@ public function __construct(){
       if($this->getId){
         $this->commentManager = new CommentManager();
         $comm = $this->commentManager->getCommentSup($this->getId);
-        require('view/Backend/comView.php');
+        require('view/backend/comView.php');
       }
     }
 
@@ -147,7 +169,7 @@ public function __construct(){
     }
   }
 
-    public function createForgotPass(){                /*---------------- MOT-DE-PASSE-OUBLIE ----------------*/
+    public function createForgotPass(){           /*---------------- MOT-DE-PASSE-OUBLIE ----------------*/
        require('view/backend/forgotPass.php');
     }
 }
