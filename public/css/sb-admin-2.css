@@ -42,7 +42,28 @@
 }
 
 
-/*****************AFFICHER TABLE POSTS************************/
+
+#deconectForm{
+     width: 100%;
+     height: auto;
+     position: absolute;
+     top: 0px;
+     left: 0%;
+     background-color: #3122;
+     padding: 0px 10px 20px 10px;
+}
+
+.deconnexion{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    background-color: #9457;
+    border-radius: 5px;
+    color: white;
+}
+
+/************************** AFFICHER TABLE POSTS ************************/
 
 #cadre{
     width: 100%;
@@ -89,7 +110,6 @@ a{
     text-decoration: none;
     color: green;
 }   
-
 
 #singleComment{
     width: 100%;
@@ -288,14 +308,14 @@ color: red;
     background-color: #3241;
 }
 
-
 #alertComment{
   width: 50%;
-  height: 100%;
+  height: auto;
   position: relative;
   top: auto;
   left: 20%;
   padding: 10px;
+  margin-bottom: 100px;
   border-radius: 10px;
   background-color: #8466;
 }
@@ -337,6 +357,11 @@ color: red;
   top: 100%;
   padding: 10px;
 }  
+
+
+
+
+
 
 
 
@@ -921,30 +946,6 @@ pre code {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
-
-
-#deconectForm{
-     width: 100%;
-     height: auto;
-     position: absolute;
-     top: 0px;
-     left: 0%;
-     background-color: #3122;
-     padding: 0px 10px 20px 10px;
-}
-
-.deconnexion{
-    width: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0%;
-    background-color: #9457;
-    border-radius: 5px;
-    color: white;
-}
-
-
-
 
 .col {
   flex-basis: 0;
