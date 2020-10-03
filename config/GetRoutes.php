@@ -7,7 +7,6 @@ class GetRoutes{
 	public function __construct(){
 
  		try{          
-                        
 			$url = '';
 
             if($_SERVER['REQUEST_URI']){
@@ -29,16 +28,13 @@ class GetRoutes{
                 }                               
 
                 $explodeRoute = explode('/', $routes[$url[2]]);
-                
                 $this->_Controllers = new $explodeRoute[0];
-                
                 $function = $explodeRoute[1];
                 
                 if(isset($explodeRoute[2]) && $explodeRoute[2] =='$id'){
                     $this->_Controllers->$function($id);
                 }
                 else{
-                    
                     $this->_Controllers->$function();
                 }
             }
@@ -62,26 +58,22 @@ class GetRoutes{
      
     public function getAllRoutes(){
         
-/********************************************************************F R O N T E N D***********************************/
-        $routes['']                 = 'Frontend/accueil'; 
-        $routes['accueil']          = 'Frontend/accueil'; 
-        $routes['listPosts']        = 'Frontend/listPosts';
-        $routes['loginView']        = 'Frontend/loginView';
-        $routes['registerView']     = 'Frontend/registerView';
-        $routes['createPostView']   = 'Frontend/createPostView';
-        $routes['createPost']       = 'Frontend/createPost';
-        $routes['createLogView']    = 'Frontend/createLogView';
-        $routes['post']             = 'Frontend/post/$id';
-        $routes['editPost']         = 'Frontend/editPost/$post';
-
-
-
-        $routes['editPostView']     = 'Frontend/editPostView/$id';
-
-        $routes['addComment']       = 'Frontend/addComment/$id';
+/********************************* F R O N T E N D ***********************************/
+        $routes['']                     = 'Frontend/accueil'; 
+        $routes['accueil']              = 'Frontend/accueil'; 
+        $routes['listPosts']            = 'Frontend/listPosts';
+        $routes['loginView']            = 'Frontend/loginView';
+        $routes['registerView']         = 'Frontend/registerView';
+        $routes['createLogView']        = 'Frontend/createLogView';
+        $routes['post']                 = 'Frontend/post/$id';
+        $routes['editPost']             = 'Frontend/editPost/$post';
+        $routes['addComment']           = 'Frontend/addComment/$id';
         
-/*********************************************************************B A C K E N D*************************************/
+/************************************* B A C K E N D *************************************/
         $routes['adminPage']            = 'Backend/adminPage';
+        $routes['createPostView']       = 'Backend/createPostView';
+        $routes['createPost']           = 'Backend/createPost';
+        $routes['modifPostView']        = 'Backend/modifPostView/$id';
         $routes['alertAdmin']           = 'Backend/alertAdmin';
         $routes['postAdmin']            = 'Backend/postAdmin';
         $routes['suppMembre']           = 'Backend/suppMembre';
