@@ -11,9 +11,8 @@
     <!-- container -->
     <div class="container">
         <!-- col-md-12 -->
-        <div class="col-md-12">
-            <h2>Article(s) recent</h2>
-        </div>
+        <div class="col-md-12"><h2>Article(s) recent</h2></div>
+
             <!-- row -->
                 <div class="row">
                     <?php foreach($posts as $posts){ ?>
