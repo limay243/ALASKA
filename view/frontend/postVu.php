@@ -7,7 +7,8 @@
                 <?php if(empty($editPost)): ?>
             <em>Créé le <?= $post['creation_date_fr'] ?></em><br>
                 <?php endif; ?>
-            <p><?= htmlspecialchars($post['contenu']) ?></p>               
+            <p><?= htmlspecialchars($post['contenu']) ?></p>  
+            <h2><a href="<?=MON_SITE?>listPosts"> Retour</a></h2>             
         </div>
 
         <?php if(isset($_SESSION['userType']) && $_SESSION['userType']==1): ?> 
@@ -21,11 +22,7 @@
                     <?= htmlspecialchars($comment['comment']) ?><br>
                     <?php if(isset($_SESSION["userType"])): ?>
 
-                    <?php if(isset($alertComment)==true): ?>
-                     <p><font color="red">deja signalé</font></p>
-                    <?php else: ?>
                      <br><a href="<?=MON_SITE?>alertComment/<?=$comment['id']?>">Signaler</a>
-                    <?php endif; ?>
                     <?php endif; ?>
                 </p>
             <?php }?>
