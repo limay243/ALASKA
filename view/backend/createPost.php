@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Créer un post</title>
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="<?= MON_SITE ?>public/img/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<!--<link rel="stylesheet" type="text/css" href="public/vendor/bootstrap/css/bootstrap.min.css">-->
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/css/util.css">
+	<link rel="stylesheet" type="text/css" href="<?= MON_SITE ?>public/css/main.css">
+<!--===============================================================================================-->
+  <script src="https://cdn.tiny.cloud/1/g7twshktaukuhj4z0joc2kwe7k0oyytpd495s1jzxaqfkrb7/tinymce/5/tinymce.min.js" referrerpolicy="origin">
+  </script>
+</head>
+<body>
+<?php ob_start(); ?>
+	<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="<?= MON_SITE ?>public/img/img-01.png" alt="IMG">
+			</div>
+
+			<form method="post" action="createPost" class="contact1-form validate-form">
+				<span class="contact1-form-title">
+					Ajouter un post
+				</span>
+
+				<div class="wrap-input1 validate-input" data-validate = "Name is required">
+					<input class="input1" type="text" name="titre" placeholder="Titre de l'article">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Message is required">
+  					<textarea name="content"></textarea>
+						  <script>
+						    tinymce.init({
+						      selector: 'textarea',
+						      plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+						      toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+						      toolbar_mode: 'floating',
+						      tinycomments_mode: 'embedded',
+						      tinycomments_author: 'Author name',
+
+						      forced_root_block : false,
+							  force_br_newlines : true,
+							  force_p_newlines : false
+						    });
+						  </script>
+
+  							<span class="shadow-input1"></span>
+						</div>
+
+				<div class="container-contact1-form-btn">
+					<button type="submit" class="contact1-form-btn">
+						<span>
+							Créer l'article
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!--===============================================================================================-->
+	<script src="<?= MON_SITE ?>public/js/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="<?= MON_SITE ?>public/js/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="<?= MON_SITE ?>public/js/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+<!--===============================================================================================-->
+	<script src="<?= MON_SITE ?>public/js/mainForm.js"></script>
+
+<?php $content = ob_get_clean(); ?>
+	<?php require('view/backend/admin.php'); ?>
+</body>
+</html>
