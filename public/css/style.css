@@ -168,15 +168,7 @@ a{
  .section-row {
      margin-bottom:40px;
 }
-.col-md-12 h2 {
-     width: 25%;
-     position: relative;
-     top: 5%;
-     left: 0px;
-     border-radius: 5px;
-     background-color: #1112;
-     padding: 5px 0px 5px 10px;
-}
+
 
 .col-md-4{
     background-color: #5331;
@@ -541,58 +533,7 @@ a{
      background-image: linear-gradient(to top, rgba(33, 38, 49, 0.3) 0%, transparent 100%);
 }
  
-/*
- #post-header.page-header {
-     padding-top: 120px;
-}
- .page-header h1 {
-     text-transform: capitalize;
-     margin-bottom: 0px;
-}
- #post-header.page-header h1 {
-     color: #FFF;
-}
- .page-header .post-meta {
-     margin: 15px 0px;
-}
- .page-header .post-meta .post-date {
-     color: #eceef2;
-}
- .page-header .page-header-breadcrumb {
-     margin: 15px 0px;
-}
- .page-header .page-header-breadcrumb li {
-     display: inline-block;
-}
- .page-header .page-header-breadcrumb li, .page-header .page-header-breadcrumb li a {
-     font-size: 13px;
-     text-transform: capitalize;
-     color: #a7b3c6;
-}
- .page-header .page-header-breadcrumb li a {
-     -webkit-transition: 0.2s color;
-     transition: 0.2s color;
-}
- .page-header .page-header-breadcrumb li a:hover, .page-header .page-header-breadcrumb li a:focus {
-     color: #0b0f28;
-     text-decoration: none;
-}
- .page-header .page-header-breadcrumb li + li:before {
-     content: '/';
-     display: inline-block;
-     margin: 0px 10px;
-}
-
-*/
-
-/*---------------------------- LOGIN ----------------------------*/
-/*
-.p-5 {
-    flex: 0 0 50%;
-    max-width: 100%;
-    background-color: grey;
-  }
-*/
+/*---------------------------- NAVIGATION LOGIN ----------------------------*/
 
 #loginForm{
     width: 20%;
@@ -647,7 +588,7 @@ a{
     padding: 0px 10px 0px 10px;
 }
 
-/*---------------------------- PRESENTATION ----------------------------*/
+/*---------------------------- ACCUEIL PRESENTATION ----------------------------*/
 #content{
     width: 100%;
     height: 700px;
@@ -690,9 +631,8 @@ text-align: center;
     padding: 20px;
 }
 #dernierArticle h1{
-    width: 40%;
-    background-color: #1161;
-    padding: 2px;
+    width: 100%;
+    text-align: center;
 }
 /*==================================== POSTS ==========================================*/
 
@@ -757,8 +697,7 @@ text-align: center;
     padding: 15px;
     box-shadow: 2px 2px 20px grey;
 }
-.news
-{
+.news{
     width: 100%;
      margin-bottom: 10px;
      background-color: #5291;
@@ -767,6 +706,22 @@ text-align: center;
      box-shadow: 2px 2px 20px grey;
      word-break: break-all;
 }  
+
+.col-md-12{
+     width: 100%;
+     position: relative;
+     top: 40px;
+     left: 0px;
+}
+.col-md-12 h2 {
+     width: 250px;
+     position: absolute;
+     top: auto;
+     left: 0px;
+     border-radius: 5px;
+     background-color: #1112;
+     padding: 5px 0px 5px 10px;
+}
 
 #singleComment{
     width: 100%;
