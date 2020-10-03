@@ -15,7 +15,7 @@
               <li id="art"><a href="<?= MON_SITE ?>post/<?= $req["id"]?>">ARTICLE N° <?= $req['id']?></a> | TITRE: <?= $req['titre']?></li>
               <br>
               <li id="contenuArt"><?= $req['contenu']?></li><br>
-              <div id="Modifier"><a href="<?= MON_SITE ?>editPostView/<?= $req['id']?>">Modifier</a></div>
+              <div id="Modifier"><a href="<?= MON_SITE ?>modifPostView/<?= $req['id']?>">Modifier</a></div>
             </ul>
           <?php endforeach ?> 
         </div>  
